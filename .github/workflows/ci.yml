@@ -113,6 +113,7 @@ jobs:
         with:
           report_paths: build/meson-logs/testlog.junit.xml
           include_passed: true
+          detailed_summary: true
 
   build_job:
     # The host should always be linux
