@@ -108,10 +108,10 @@ jobs:
           fail_ci_if_error: true # optional (default = false)
           verbose: false # optional (default = false)
       - name: "Publish Test Results"
-        uses: EnricoMi/publish-unit-test-result-action@v2
+        uses: mikepenz/action-junit-report@v4
         if: always()
         with:
-          files: build/meson-logs/testlog.junit.xml
+          report_paths: build/meson-logs/testlog.junit.xml
 
   build_job:
     # The host should always be linux
